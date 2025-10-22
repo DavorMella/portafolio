@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- ✅ Font Awesome CDN (funciona sin tu kit personal) -->
+  <!-- Font Awesome Free CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --text-color: #fff;
-      --bg-overlay: rgba(0, 0, 0, 0.6);
+      /* 🔽 Fondo un poco más oscuro para mejor contraste */
+      --bg-overlay: rgba(0, 0, 0, 0.75);
       --card-bg: rgba(255, 255, 255, 0.95);
       --card-text: #111;
       --accent: #00bfa6;
@@ -41,7 +42,7 @@
     }
 
     header {
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem; /* 🔽 Antes era 2rem, se redujo */
       animation: fadeIn 1s ease-in-out;
     }
 
@@ -52,7 +53,7 @@
 
     h2 {
       font-size: 1.5rem;
-      margin: 2rem 0 1rem;
+      margin: 1.5rem 0 1rem; /* 🔽 Se redujo el espacio superior */
       color: var(--accent);
     }
 
@@ -62,7 +63,7 @@
 
     /* Íconos debajo del subtítulo */
     .header-socials {
-      margin-top: 1rem;
+      margin-top: 0.8rem; /* 🔽 Antes era 1rem, se redujo */
       display: flex;
       justify-content: center;
       gap: 1.5rem;
@@ -77,6 +78,10 @@
     .header-socials a:hover {
       transform: scale(1.2);
       color: var(--accent);
+    }
+
+    main {
+      margin-top: 0.5rem; /* 🔽 Eleva todo el contenido hacia arriba */
     }
 
     .card {
@@ -132,12 +137,12 @@
     <h1>Davor Mella</h1>
     <p>Desarrollo web y soluciones tecnológicas</p>
 
-    <!-- ✅ Íconos debajo del subtítulo -->
+    <!-- Íconos debajo del subtítulo -->
     <div class="header-socials" aria-label="Redes sociales">
-      <a href="https://www.linkedin.com/in/davor-mella/" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/davor-mella" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://www.facebook.com/davor.mella.2025/" target="_blank" aria-label="Facebook">
+      <a href="https://www.facebook.com/davor.mella" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook"></i>
       </a>
     </div>
@@ -165,7 +170,6 @@
       <a class="card" href="https://wa.me/56982052552" target="_blank">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
-      <!-- ✅ Enlace que abre Gmail con tu correo listo para redactar -->
       <a class="card" href="https://mail.google.com/mail/?view=cm&fs=1&to=davor.profesional@gmail.com" target="_blank">
         <i class="fas fa-envelope"></i> Enviar correo
       </a>
@@ -173,10 +177,11 @@
   </main>
 
   <footer>
-    2025 Davor Mella
+    © 2025 Davor Mella — Todos los derechos reservados
   </footer>
 
 </body>
 </html>
+
 
 
