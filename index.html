@@ -3,117 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Davor Mella - Portfolio</title>
+  <meta name="description" content="Portafolio personal de Davor Mella - Desarrollo web y soluciones tecnológicas.">
+  <title>Davor Mella | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> <!-- Para iconos -->
+  <!-- ✅ Font Awesome CDN (funciona sin tu kit personal) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
+    :root {
+      --text-color: #fff;
+      --bg-overlay: rgba(0, 0, 0, 0.6);
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --card-text: #111;
+      --accent: #00bfa6;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: url('imagenes/laptop-2620118.jpg') no-repeat center center/cover;
-      color: white;
+      background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+                  url('imagenes/laptop-2620118.jpg') center/cover no-repeat;
+      color: var(--text-color);
       text-align: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-      backdrop-filter: brightness(0.5);
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin: 0.5rem 0;
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin: 2rem 0 1rem;
+      color: var(--accent);
     }
 
     p {
       margin: 0.5rem 0;
     }
 
-    .socials {
-      margin: 1rem 0;
+    /* Íconos debajo del subtítulo */
+    .header-socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
-    .socials a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.8rem;
-      text-decoration: none;
+    .header-socials a {
+      color: var(--text-color);
+      font-size: 2rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .header-socials a:hover {
+      transform: scale(1.2);
+      color: var(--accent);
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.9);
-      color: #111;
+      background: var(--card-bg);
+      color: var(--card-text);
       margin: 1rem auto;
-      padding: 1rem;
-      border-radius: 12px;
-      width: 85%;
-      max-width: 400px;
+      padding: 1rem 1.5rem;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 420px;
       font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
     .card i {
       font-size: 1.4rem;
+      color: var(--accent);
     }
 
     footer {
-      margin-top: 2rem;
+      margin-top: 3rem;
       font-size: 0.8rem;
       opacity: 0.8;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.3rem; }
+      .card { font-size: 0.95rem; }
+    }
   </style>
-  <!-- Iconos de Font Awesome -->
-  <script src="https://kit.fontawesome.com/5cfa34a9f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <h1>Davor Mella</h1>
-  <p>Desarrollo web y soluciones tecnológicas</p>
+  <header>
+    <h1>Davor Mella</h1>
+    <p>Desarrollo web y soluciones tecnológicas</p>
 
-  <!-- Redes sociales -->
-  <div class="socials">
-    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
+    <!-- ✅ Íconos debajo del subtítulo -->
+    <div class="header-socials" aria-label="Redes sociales">
+      <a href="https://www.linkedin.com/in/davor-mella/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/davor.mella.2025/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </header>
 
-  <!-- Sección Sobre mí -->
-  <h2>Sobre mí</h2>
-  <p>• Tec. Programación y análisis de sistemas</p>
-  <p>• Estudiante de Ing. Informática y computación</p>
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>• Técnico en Programación y Análisis de Sistemas</p>
+      <p>• Estudiante de Ingeniería Informática y Computación</p>
+    </section>
 
-  <!-- Sección Muestras -->
-  <h2>Muestras de trabajos</h2>
-  <a class="card" href="https://thebigfries.cl/" target="_blank">
-    <i class="fas fa-hand-pointer"></i> The Big Fries Web
-  </a>
-  <a class="card" href="https://gimnasio360.cl/" target="_blank">
-    <i class="fas fa-hand-pointer"></i> Gimnasio 360 Web
-  </a>
+    <section id="projects">
+      <h2>Muestras de trabajos</h2>
+      <a class="card" href="https://thebigfries.cl/" target="_blank">
+        <i class="fas fa-hand-pointer"></i> The Big Fries Web
+      </a>
+      <a class="card" href="https://gimnasio360.cl/" target="_blank">
+        <i class="fas fa-hand-pointer"></i> Gimnasio 360 Web
+      </a>
+    </section>
 
-  <!-- Contacto -->
-  <h2>Contacto</h2>
-  <a class="card" href="https://wa.me/56982052552" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
+    <section id="contact">
+      <h2>Contacto</h2>
+      <a class="card" href="https://wa.me/56982052552" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <!-- ✅ Enlace que abre Gmail con tu correo listo para redactar -->
+      <a class="card" href="https://mail.google.com/mail/?view=cm&fs=1&to=davor.profesional@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> Enviar correo
+      </a>
+    </section>
+  </main>
 
+  <footer>
+    2025 Davor Mella
+  </footer>
 
 </body>
 </html>
+
 
