@@ -14,8 +14,7 @@
   <style>
     :root {
       --text-color: #fff;
-      /* 🔽 Fondo un poco más oscuro para mejor contraste */
-      --bg-overlay: rgba(0, 0, 0, 0.75);
+      --bg-overlay: rgba(0, 0, 0, 0.78); /* 🔽 un poco más oscuro */
       --card-bg: rgba(255, 255, 255, 0.95);
       --card-text: #111;
       --accent: #00bfa6;
@@ -42,7 +41,7 @@
     }
 
     header {
-      margin-bottom: 1.2rem; /* 🔽 Antes era 2rem, se redujo */
+      margin-bottom: 0.5rem; /* 🔽 Antes 1.2rem, ahora menos espacio */
       animation: fadeIn 1s ease-in-out;
     }
 
@@ -53,20 +52,20 @@
 
     h2 {
       font-size: 1.5rem;
-      margin: 1.5rem 0 1rem; /* 🔽 Se redujo el espacio superior */
+      margin: 1rem 0 0.5rem; /* 🔽 menos margen superior */
       color: var(--accent);
     }
 
     p {
-      margin: 0.5rem 0;
+      margin: 0.3rem 0;
     }
 
     /* Íconos debajo del subtítulo */
     .header-socials {
-      margin-top: 0.8rem; /* 🔽 Antes era 1rem, se redujo */
+      margin-top: 0.5rem; /* 🔽 reducido */
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
 
     .header-socials a {
@@ -81,14 +80,14 @@
     }
 
     main {
-      margin-top: 0.5rem; /* 🔽 Eleva todo el contenido hacia arriba */
+      margin-top: 0.2rem; /* 🔽 espacio mínimo después de header */
     }
 
     .card {
       background: var(--card-bg);
       color: var(--card-text);
-      margin: 1rem auto;
-      padding: 1rem 1.5rem;
+      margin: 0.8rem auto;
+      padding: 1rem 1.2rem;
       border-radius: 14px;
       width: 90%;
       max-width: 420px;
@@ -114,7 +113,7 @@
     }
 
     footer {
-      margin-top: 3rem;
+      margin-top: 2rem;
       font-size: 0.8rem;
       opacity: 0.8;
     }
@@ -177,11 +176,12 @@
   </main>
 
   <footer>
-    © 2025 Davor Mella — Todos los derechos reservados
+     2025 Davor Mella 
   </footer>
 
 </body>
 </html>
+
 
 
 
